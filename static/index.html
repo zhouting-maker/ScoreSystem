@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>智能数学解题智能体</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🧮 智能数学解题智能体</h1>
+    <p class="subtitle">输入任意数学题目，AI 将分步推导并给出最终答案</p>
+  </header>
+
+  <main>
+    <section class="input-area">
+      <textarea id="problem" rows="4"
+        placeholder="例如：求解方程 x² - 5x + 6 = 0"></textarea>
+      <button id="solve-btn">开始解题</button>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <h2>💭 解题思路</h2>
+        <div id="reasoning" class="content reasoning"></div>
+      </div>
+      <div class="panel">
+        <h2>✅ 最终解答</h2>
+        <div id="answer" class="content answer"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
